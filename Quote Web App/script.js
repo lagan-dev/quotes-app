@@ -6,8 +6,8 @@ const api_url = 'https://api.quotable.io/random';
 async function getQuote(url) {
     const response = await fetch(url);
     const data = await response.json();
-    quote.innerHTML = data.content;
-    author.innerHTML = data.author;
+    quote.textContent = data.content;
+    author.textContent = data.author;
 }
 
 getQuote(api_url);
